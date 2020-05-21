@@ -27,21 +27,29 @@ const awayFieldGoal = e => {
 
   return (
 		<div className="container">
-			<section className="scoreboard">
+			<section className="scoreboard" style={{ color: '#d7ff82' }}>
 				<div className="topRow">
 					<div className="home">
-						<h2 className="home__name">Lions</h2>
+						<h2 className="home__name" style={{ color: 'DodgerBlue' }}>
+							Lions
+						</h2>
 
 						{/* TODO STEP 3 - We need to change the hard-code values in these <div>'s to accept dynamic values from our state. */}
-						<div className="home__score">
+						<div className="home__score" style={{ color: 'silver' }}>
 							{' '}
 							<span>{homePoints}</span>
 						</div>
 					</div>
-					<div className="timer">00:03</div>
+					<div className="timer" style={{ color: 'WhiteSmoke' }}>
+						00:03
+					</div>
 					<div className="away">
-						<h2 className="away__name">Tigers</h2>
-						<div className="away__score">{awayPoints}</div>
+						<h2 className="away__name" style={{ color: 'orange' }}>
+							Tigers
+						</h2>
+						<div className="away__score" style={{ color: 'gold' }}>
+							{awayPoints}
+						</div>
 					</div>
 				</div>
 				<BottomRow />
@@ -49,18 +57,34 @@ const awayFieldGoal = e => {
 			<section className="buttons">
 				<div className="homeButtons">
 					{/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-					<button className="homeButtons__touchdown" onClick={makeTouchDown}>
+					<button
+						className="homeButtons__touchdown"
+						onClick={makeTouchDown}
+						style={{ color: 'DodgerBlue' }}
+					>
 						Home Touchdown
 					</button>
-					<button className="homeButtons__fieldGoal" onClick={makeFieldGoal}>
+					<button
+						className="homeButtons__fieldGoal"
+						onClick={makeFieldGoal}
+						style={{ color: 'DodgerBlue' }}
+					>
 						Home Field Goal
 					</button>
 				</div>
 				<div className="awayButtons">
-					<button className="awayButtons__touchdown" onClick={awayTouchDown}>
+					<button
+						className="awayButtons__touchdown"
+						onClick={awayTouchDown}
+						style={{ color: 'orange' }}
+					>
 						Away Touchdown
 					</button>
-					<button className="awayButtons__fieldGoal" onClick={awayFieldGoal}>
+					<button
+						className="awayButtons__fieldGoal"
+						onClick={awayFieldGoal}
+						style={{ color: 'orange' }}
+					>
 						Away Field Goal
 					</button>
 				</div>
